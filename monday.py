@@ -11,7 +11,7 @@ from io import BytesIO
 
 class config():
     def __init__(self, delimiter, quote):
-        self.token = "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjM5NjY4OTU2LCJ1aWQiOjExNTU5MDM1LCJpYWQiOiIyMDIwLTAzLTA5IDIxOjU4OjU4IFVUQyIsInBlciI6Im1lOndyaXRlIn0.ynf2bpoQ0GIPqyqADCArodqwbu9K_1Y8exaERUK15nY"
+        self.token = ""
         self.base_url = "https://api.monday.com/v2/"
         self.headers = {
             "Content-Type": "application/json",
@@ -20,15 +20,14 @@ class config():
         self.delimiter = delimiter
         self.quote = quote
         self.quote_normals = csv.QUOTE_NONNUMERIC
-        self.account_name = 'devblobdatazendesk'
-        self.account_key = 'Ve77nc2T1Ieo0xGhzb86OBTPFM8L5KTGZkpQ4PAqdgrEpNx9Ej7VqZEc6Giemsf+hXriYK8xKMSonVP7REJUFQ=='
+        self.account_name = ''
+        self.account_key = ''
         self.file_path = os.getcwd() + '/'
         self.delimiter = delimiter
         self.quote = quote
         self.quote_normals = csv.QUOTE_NONNUMERIC
         self.blob_bool = True
         self.rmv_file = False
-
 
     def blob_upload(self, typename):
         print("connecting to blob storage")
